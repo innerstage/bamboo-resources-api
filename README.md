@@ -19,7 +19,7 @@ Flask es un framework de backend que permite desarrollar aplicaciones web comple
 ## Creación de archivos estáticos
 En este mismo repositorio, crea los archivos estáticos con datos falsos o algo que sientas que apoye los ejemplos de la mejor manera posible, bien pedagógico, con la complejidad justa. Te recomiendo investigar una librería de Python que se llama `Faker` para crear datos falsos en DataFrames y luego puedes usar `df.to_csv("nombre_de_archivo.csv", index=False, quoting=csv.QUOTE_NONNUMERIC)` para que guarde los datos en un archivo (importa `csv` en tu script para tener el quoting, es el mecanismo para ponerle comillas a los valores). Da lo mismo cómo inventes los datos, puede ser en un notebook o con un script, lo que importa es el resultado final.
 
-# Servir los archivos estáticos con Flask
+## Servir los archivos estáticos con Flask
 Encontré esto para servir los archivos estáticos:
 
 ```
@@ -38,10 +38,10 @@ if __name__ == "__main__":
 
 Se supone que así se define una ruta y el archivo tiene que estar dentro de una carpeta que se llama `static` para que funcione.
 
-# Crear APIs
+## Crear APIs
 Usaremos APIs para ejemplos más complejos de `DownloadStep` o parametrización, lo que desarrolles debería dar respuestas en JSON u otros formatos según corresponda, esto lo podemos ir haciendo juntos, y conversar sobre los requerimientos, de todo en realidad... trataré de darte especificaciones bien acotadas.
 
-# Cosas por hacer:
+## Cosas por hacer:
 - [ ] #1. Crear un archivo CSV con varias columnas y filas: Basado en mi repositorio de datos ficticios (tienda de verduras) https://github.com/innerstage/fictitious-dataset.git.
 - [ ] #2. Subirlo a una instancia de AWS S3, hablar con @Dave a ver si tenemos una cuenta de AWS de Datawheel.
 - [ ] #3. Subirlo a un GCP Storage Bucket, en el proyecto Bamboo.
