@@ -6,9 +6,11 @@ import calendar
 # set the project root directory as the static folder, you can set others.
 app = Flask(__name__, static_url_path='')
 
+
 @app.route('/static/<path:path>')
 def send_file(path):
     return send_from_directory('static', path)
+
 
 @app.route('/api/<year>')
 def send_response(year):
@@ -34,6 +36,18 @@ def send_response(year):
         response.append(month_dict)
 
     return jsonify(response)
+
+
+@app.route('/status')
+def send_status(path):
+
+    status_dict = {
+        "status": "OK",
+        "last_updated": "December 15th, 2021"
+    }
+
+    return jsonify(status_dict)
+
 
 if __name__ == "__main__":
     app.run()
