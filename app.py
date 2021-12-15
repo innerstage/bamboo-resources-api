@@ -39,7 +39,7 @@ def send_response(year):
 
 
 @app.route('/status')
-def send_status(path):
+def send_status():
 
     status_dict = {
         "status": "OK",
